@@ -1,13 +1,10 @@
-# wais-battlepass
-This repo consists of an article showing how to use the wais-battlepass.
-
 Hi, this resource will explain to you how to add rewards, levels and quests to waist-battlepass, how to trigger quests.
 
 # Add Rewards
 
-1 - Goto config file and open
-2 - Find _Config.Battlepass_
-3 - We decide which membership to add this reward to. We choose the regular or premium member.
+- Goto config file and open
+- Find _Config.Battlepass_
+- We decide which membership to add this reward to. We choose the regular or premium member.
 
 Example:
 ```
@@ -43,8 +40,8 @@ Example:
 
 # Add Levels
 
-1 - Open config file and find this array _Config.Levels_
-2 - Enter a new level. Only INT chars
+- Open config file and find this array _Config.Levels_
+- Enter a new level. Only INT chars
 
 Example:
 ```
@@ -65,8 +62,8 @@ Example:
 
 # Add missions
 
-1 - Open config file and find this array _Config.Missions_
-2 - Copy the new task you will add by editing the table below and paste it at the bottom of this array
+- Open config file and find this array _Config.Missions_
+- Copy the new task you will add by editing the table below and paste it at the bottom of this array
 
 Example:
 ```
@@ -132,26 +129,26 @@ If you want to activate the Tebex sale, you need to apply what I said.
 
 ## Connecting Tebex to the server
 
-1 - Create a tebex account, login if you have
-2 - After logging in to your account, let's go to the page called "Game Servers" from the left side of the page.
-3 - Click the "CONNECT GAME SERVER" button at the top right of the page.
-4 - Let's choose the place named "PLUGIN" from the page that comes up and continue.
-5 - Then let's choose your server name and in which packages these sales will be active, but "SELECT ALL" will help you.
-6 - After continuing, it will give you an sv_tebexSecret key on the page that opens in front of you, let's copy it and paste it anywhere in server.cfg, but let's make sure that this code is on the top lines. Then let's start the server.
-7 - When you start the server, the text "NOT CONNECT" on the top right of the page will change to "CONNECT" after a few seconds. After seeing this article, press the continue button and now there is a communication system between your server and tebex.
+- Create a tebex account, login if you have
+- After logging in to your account, let's go to the page called "Game Servers" from the left side of the page.
+- Click the "CONNECT GAME SERVER" button at the top right of the page.
+- Let's choose the place named "PLUGIN" from the page that comes up and continue.
+- Then let's choose your server name and in which packages these sales will be active, but "SELECT ALL" will help you.
+- After continuing, it will give you an sv_tebexSecret key on the page that opens in front of you, let's copy it and paste it anywhere in server.cfg, but let's make sure that this code is on the top lines. Then let's start the server.
+- When you start the server, the text "NOT CONNECT" on the top right of the page will change to "CONNECT" after a few seconds. After seeing this article, press the continue button and now there is a communication system between your server and tebex.
 
 ## Creating a Package Sending News to the Server
 
 We have connected tebex with our server above, and now we will transfer the sales from tebex to the server instantly and make a system where the player can claim it.
 
-1 - We click on the "PACKAGES" section from the left side and we are directed to the page.
-2 - Then we click on the "ADD NEW" button on the top right of the page and choose the package option.
-3 - On the page that opens before us, we enter the title of the product. This is very important because we will also use the product title you entered in the script, so be careful to write neat and plain text without emojis.
-4 - After entering the other necessary information of the product, "Configure what your customers should receive upon purchasing this package".We select the "+GAME SERVER COMMANDS" option from the section.
-5 - From the drop-down section, we choose the server name that we just created in the above steps. Then click the "ADD COMMAND" button at the bottom.
-6 - After clicking the button, we paste the following code in the "Enter the command to execute on your server" section. This code: ```buypack {"tid": "{transaction}",  "mail": "{email}", "pname": "{packageName}", "price": "{price}"}```
-7 - After pasting the code, click the settings icon on the right. From this section, we select our server in the "Game server to Execute On" section. From the "Require Player To Be Online" section, we select the "Execute the command even if the player is offline" option and create our package.
-8 - Copy the product name you created. Find the TebexPack array and create a new table in it as follows: 
+- We click on the "PACKAGES" section from the left side and we are directed to the page.
+- Then we click on the "ADD NEW" button on the top right of the page and choose the package option.
+- On the page that opens before us, we enter the title of the product. This is very important because we will also use the product title you entered in the script, so be careful to write neat and plain text without emojis.
+- After entering the other necessary information of the product, "Configure what your customers should receive upon purchasing this package".We select the "+GAME SERVER COMMANDS" option from the section.
+- From the drop-down section, we choose the server name that we just created in the above steps. Then click the "ADD COMMAND" button at the bottom.
+- After clicking the button, we paste the following code in the "Enter the command to execute on your server" section. This code: ```buypack {"tid": "{transaction}",  "mail": "{email}", "pname": "{packageName}", "price": "{price}"}```
+- After pasting the code, click the settings icon on the right. From this section, we select our server in the "Game server to Execute On" section. From the "Require Player To Be Online" section, we select the "Execute the command even if the player is offline" option and create our package.
+- Copy the product name you created. Find the TebexPack array and create a new table in it as follows: 
 ```
 If this product is level:
     ["Package name"] = {"level", --[[dont touch!]] "level0" --[[In this section, you must specify which level you are selling. For example, if you sold 10 level boosts, this will be level10.]] }
