@@ -68,11 +68,11 @@ Example:
 Example:
 ```
     ["short title"] = {                             -- mission name [STRING]
-        ["title"]       = "Kill Player",            -- Main Tilte
-        ["information"] = "Lipsum",                 -- Informatıon messages.
-        ["addxp"]       = 100,                      -- XP will be given to the player when the mission is completed
-        ["needcount"]   = 10,                       -- Total number of advances the player needs
-        ["eventname"]   = "wais:addmissionxp:porance", -- Read the bottom line.
+        ["title"]       = "Kill Player",            -- Main Tilte [STRING]
+        ["information"] = "Lipsum",                 -- Informatıon messages. [STRING]
+        ["addxp"]       = 100,                      -- XP will be given to the player when the mission is completed [INT]
+        ["needcount"]   = 10,                       -- Total number of advances the player needs [INT]
+        ["eventname"]   = "wais:addmissionxp:porance", -- Read the bottom line. [STRING]
     },
 ```
 
