@@ -41,7 +41,7 @@ Example:
 # Add Levels
 
 - Open config file and find this array _Config.Levels_
-- Enter a new level. Only INT chars
+- Enter a new level. Only INT numbers
 
 Example:
 ```
