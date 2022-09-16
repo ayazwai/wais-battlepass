@@ -148,7 +148,7 @@ We have connected tebex with our server above, and now we will transfer the sale
 - From the drop-down section, we choose the server name that we just created in the above steps. Then click the "ADD COMMAND" button at the bottom.
 - After clicking the button, we paste the following code in the "Enter the command to execute on your server" section. This code: ```buypack {"tid": "{transaction}",  "mail": "{email}", "pname": "{packageName}", "price": "{price}"}```
 - After pasting the code, click the settings icon on the right. From this section, we select our server in the "Game server to Execute On" section. From the "Require Player To Be Online" section, we select the "Execute the command even if the player is offline" option and create our package.
-- Copy the product name you created. Find the TebexPack array and create a new table in it as follows: 
+- Copy the product name you created. Find the TebexPack table and create a new table in it as follows: 
 ```
 If this product is level:
     ["Package name"] = {"level", --[[dont touch!]] "level0" --[[In this section, you must specify which level you are selling. For example, if you sold 10 level boosts, this will be level10.]] }
